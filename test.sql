@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Апр 21 2017 г., 08:53
+-- Время создания: Апр 21 2017 г., 09:01
 -- Версия сервера: 10.1.9-MariaDB
 -- Версия PHP: 5.6.15
 
@@ -34,6 +34,14 @@ CREATE TABLE `g` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Дамп данных таблицы `g`
+--
+
+INSERT INTO `g` (`id`, `name`, `f`, `d`) VALUES
+(1, 'lkjhgf', 3, 2),
+(2, 'lkjhgf', 3, 2);
+
+--
 -- Индексы сохранённых таблиц
 --
 
@@ -51,7 +59,7 @@ ALTER TABLE `g`
 -- AUTO_INCREMENT для таблицы `g`
 --
 ALTER TABLE `g`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
