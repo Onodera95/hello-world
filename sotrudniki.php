@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Должности работников</title>
+    <title>Сотрудники</title>
     <style type="text/css">
         TABLE {
             width: 300px; /* Ширина таблицы */
@@ -24,17 +24,23 @@
 <body>
 <div class="container">
     <div class="row">
-        <h3>Должность</h3>
+        <h3>Сотрудники</h3>
     </div>
     <div class="row">
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Наименование</th>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>
+                <th>Должность</th>
             </tr>
             </thead>
             <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
                 <td>1</td>
                 <td>1</td>
                 <!-- /присоединить к БД/ -->
@@ -43,6 +49,7 @@
 
             </tbody>
         </table>
+        <p><button><style>="vertical-align: middle"</style>Добавить</button></p>
     </div>
 </div> <!-- /container -->
 </body>
