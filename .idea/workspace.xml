@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50cb7c72-7eff-47fc-b078-f4be91ed89bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doljnosti.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dop_inf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/instrukt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pervich_inst.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vvod_inst.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/doljnosti.php" afterPath="$PROJECT_DIR$/doljnost.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dop_inf.php" afterPath="$PROJECT_DIR$/dop_info.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/instrukt.php" afterPath="$PROJECT_DIR$/instruktaj.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +41,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dop_inf.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dop_inf.php">
+      <file leaf-file-name="dop_info.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dop_info.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="523">
               <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
@@ -48,8 +51,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doljnosti.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doljnosti.php">
+      <file leaf-file-name="doljnost.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doljnost.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="523">
               <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
@@ -80,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-633">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1493367270076" expanded="true" signature="1359:1400" ph="SELECT * FRO... sotrudniki" />
@@ -92,11 +95,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instrukt.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/instrukt.php">
+      <file leaf-file-name="instruktaj.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/instruktaj.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="523">
               <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sotrudniki.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sotrudniki.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pervich_inst.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pervich_inst.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="48" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vvod_inst.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vvod_inst.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -116,6 +149,8 @@
         <option value="$PROJECT_DIR$/doljnosti.php" />
         <option value="$PROJECT_DIR$/dop_inf.php" />
         <option value="$PROJECT_DIR$/instrukt.php" />
+        <option value="$PROJECT_DIR$/status.php" />
+        <option value="$PROJECT_DIR$/vvod_inst.php" />
       </list>
     </option>
   </component>
@@ -125,7 +160,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -139,7 +174,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -220,7 +255,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493367271689</updated>
-      <workItem from="1493367273014" duration="611000" />
+      <workItem from="1493367273014" duration="1019000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены таблицы Дополнительная информация, статус">
       <created>1493367399037</created>
@@ -250,18 +285,26 @@
       <option name="project" value="LOCAL" />
       <updated>1493367694283</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавлены таблицы Дополнительная информация, статус">
+      <created>1493367891895</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1493367891895</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="611000" />
+    <option name="totallyTimeSpent" value="1019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -339,6 +382,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doljnost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="49" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dop_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="55" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instruktaj.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="53" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-633">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1493367270076" expanded="true" signature="1359:1400" ph="SELECT * FRO... sotrudniki" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -357,58 +442,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doljnost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="49" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doljnosti.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dop_inf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dop_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="55" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/instrukt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/instruktaj.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="53" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -421,13 +458,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/sotrudniki.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493367270076" expanded="true" signature="1359:1400" ph="SELECT * FRO... sotrudniki" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instruktaj.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pervich_inst.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="48" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vvod_inst.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dop_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
