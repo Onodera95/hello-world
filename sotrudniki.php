@@ -53,18 +53,20 @@
 
             </tbody>
         </table>
-            <p><a href=""><button>
+        <p><a href=""><button>
+                    <img src="C:\xampp\htdocs\technical_security\close.png" alt="" style="vertical-align:middle">
+                    Добавить
+                </button></a></p>
+        <p><a href=""><button>
+                    <img src="C:\xampp\htdocs\technical_security\close.png" alt="" style="vertical-align:middle">
+                    Редактировать
+                </button></a></p>
+        <p><a href=""><button>
                 <img src="C:\xampp\htdocs\technical_security\close.png" alt="" style="vertical-align:middle">
                 Удалить
             </button></a></p>
-        <p><a href=""><button>
-                <img src="C:\xampp\htdocs\technical_security\close.png" alt="" style="vertical-align:middle">
-                Редактировать
-            </button></a></p>
-        <p><a href=""><button>
-                <img src="C:\xampp\htdocs\technical_security\close.png" alt="" style="vertical-align:middle">
-                 Добавить
-                </button></a></p>
+
+
     </div>
 </div> <!-- /container -->
 </body>
