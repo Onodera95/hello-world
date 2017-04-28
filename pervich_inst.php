@@ -45,5 +45,8 @@
         </table>
     </div>
 </div> <!-- /container -->
+    <p><input type="checkbox" name="a" value="1417"> Ознакомлен с инструктажем</p>
+    <p><a href="instruktaj.php"><button><style>="vertical-align: middle"</style>Подтвердить</button></a></p>
+
 </body>
 </html>

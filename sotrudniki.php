@@ -53,7 +53,7 @@
 
             </tbody>
         </table>
-        <p><button><style>="vertical-align: middle"</style>Добавить</button></p>
+        <p><a href=""> <button><style>="vertical-align: middle"</style>Добавить</button></a></p>
     </div>
 </div> <!-- /container -->
 </body>

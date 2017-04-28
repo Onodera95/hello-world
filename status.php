@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Вводный инструктаж</title>
+    <title>Статус</title>
     <style type="text/css">
         TABLE {
             width: 300px; /* Ширина таблицы */
@@ -24,19 +24,20 @@
 <body>
 <div class="container">
     <div class="row">
-        <h3>Вводный инструктаж</h3>
+        <h3>Статус</h3>
     </div>
     <div class="row">
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>Описание</th>
+
+                <th>Статус</th>
+                <th>Сотрудник</th>
             </tr>
             </thead>
             <tr>
+                <td>1 или 0</td>
                 <td>1</td>
-                <td>Ссылка на PDF</td>
                 <!-- /присоединить к БД/ -->
             </tr>
             <tbody>
@@ -45,9 +46,5 @@
         </table>
     </div>
 </div> <!-- /container -->
-
-    <p><input type="checkbox" name="a" value="Ознакомлен с инструктажем">Ознакомлен с инструктажем</p>
-    <p><a href="instruktaj.php"><button><style>="vertical-align: middle"</style>Подтвердить</button></a></p>
-
 </body>
 </html>
