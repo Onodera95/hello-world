@@ -4,6 +4,6 @@
     <file url="file://$PROJECT_DIR$/create.php" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/edit.php" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/index.php" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/test.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/technical_security.sql" dialect="MySQL" />
   </component>
 </project>
