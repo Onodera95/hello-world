@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50cb7c72-7eff-47fc-b078-f4be91ed89bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connection_db.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doljnost.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dop_info.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instruktaj.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pervich_inst.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sotrudniki.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/status.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vvod_inst.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/doljnost.php" afterPath="$PROJECT_DIR$/tables/doljnost.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dop_info.php" afterPath="$PROJECT_DIR$/tables/dop_info.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/instruktaj.php" afterPath="$PROJECT_DIR$/tables/instruktaj.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pervich_inst.php" afterPath="$PROJECT_DIR$/tables/pervich_inst.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sotrudniki.php" afterPath="$PROJECT_DIR$/tables/sotrudniki.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/status.php" afterPath="$PROJECT_DIR$/tables/status.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vvod_inst.php" afterPath="$PROJECT_DIR$/tables/vvod_inst.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -67,13 +78,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db_test.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db_test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state relative-caret-position="289">
+              <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
               <folding>
                 <marker date="1493657217188" expanded="true" signature="199:223" ph="SELECT * FRO... sotrudniki" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doljnost.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tables/doljnost.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1493400997699" expanded="true" signature="3265:3322" ph="INSERT INTO customers... " />
               </folding>
             </state>
           </provider>
@@ -164,6 +197,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technical_security" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technical_security" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tables" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -174,6 +221,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="database.main" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\technical_security\tables" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -270,7 +322,7 @@
       <workItem from="1493401003301" duration="1195000" />
       <workItem from="1493402253695" duration="92000" />
       <workItem from="1493650341719" duration="3085000" />
-      <workItem from="1493653490223" duration="3425000" />
+      <workItem from="1493653490223" duration="3579000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены таблицы Дополнительная информация, статус">
       <created>1493367399037</created>
@@ -328,22 +380,28 @@
       <option name="project" value="LOCAL" />
       <updated>1493402322345</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Подключена БД. Созданы все таблицы.">
+      <created>1493657267001</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1493657267001</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10044000" />
+    <option name="totallyTimeSpent" value="10198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25549048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25549048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29355782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16325037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -368,7 +426,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавлены таблицы Дополнительная информация, статус" />
     <MESSAGE value="Добавлены таблицы: dop_info, pervich_inst, vvod_inst." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены таблицы: dop_info, pervich_inst, vvod_inst." />
+    <MESSAGE value="Подключена БД. Созданы все таблицы." />
+    <option name="LAST_COMMIT_MESSAGE" value="Подключена БД. Созданы все таблицы." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -393,7 +452,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sotrudniki.php">
+    <entry file="file://$PROJECT_DIR$/tables/sotrudniki.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -401,7 +460,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sotrudniki.php">
+    <entry file="file://$PROJECT_DIR$/tables/sotrudniki.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -409,7 +468,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dop_info.php">
+    <entry file="file://$PROJECT_DIR$/tables/dop_info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
@@ -417,7 +476,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doljnost.php">
+    <entry file="file://$PROJECT_DIR$/tables/doljnost.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
@@ -425,7 +484,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/status.php">
+    <entry file="file://$PROJECT_DIR$/tables/status.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
@@ -433,7 +492,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instruktaj.php">
+    <entry file="file://$PROJECT_DIR$/tables/instruktaj.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
@@ -441,7 +500,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pervich_inst.php">
+    <entry file="file://$PROJECT_DIR$/tables/pervich_inst.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="48" column="108" lean-forward="false" selection-start-line="48" selection-start-column="108" selection-end-line="48" selection-end-column="108" />
@@ -449,7 +508,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vvod_inst.php">
+    <entry file="file://$PROJECT_DIR$/tables/vvod_inst.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="49" column="108" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="108" />
@@ -457,7 +516,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sotrudniki.php">
+    <entry file="file://$PROJECT_DIR$/tables/sotrudniki.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="59" column="7" lean-forward="false" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
@@ -472,7 +531,7 @@
     <entry file="file://$PROJECT_DIR$/category_instr.php" />
     <entry file="file://$PROJECT_DIR$/category_TS.php" />
     <entry file="file://$PROJECT_DIR$/index.php" />
-    <entry file="file://$PROJECT_DIR$/doljnost.php">
+    <entry file="file://$PROJECT_DIR$/tables/doljnost.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="49" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
@@ -480,7 +539,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dop_info.php">
+    <entry file="file://$PROJECT_DIR$/tables/dop_info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="55" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="7" />
@@ -488,7 +547,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instruktaj.php">
+    <entry file="file://$PROJECT_DIR$/tables/instruktaj.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="53" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
@@ -497,7 +556,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/instruktaj.php">
+    <entry file="file://$PROJECT_DIR$/tables/instruktaj.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
@@ -505,15 +564,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doljnost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/status.php">
+    <entry file="file://$PROJECT_DIR$/tables/status.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
@@ -521,7 +572,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pervich_inst.php">
+    <entry file="file://$PROJECT_DIR$/tables/pervich_inst.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="48" column="108" lean-forward="false" selection-start-line="48" selection-start-column="108" selection-end-line="48" selection-end-column="108" />
@@ -539,7 +590,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vvod_inst.php">
+    <entry file="file://$PROJECT_DIR$/tables/vvod_inst.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="49" column="108" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="108" />
@@ -548,7 +599,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pencil.png" />
-    <entry file="file://$PROJECT_DIR$/dop_info.php">
+    <entry file="file://$PROJECT_DIR$/tables/dop_info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
           <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
@@ -565,18 +616,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/close.png" />
-    <entry file="file://$PROJECT_DIR$/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493400997699" expanded="true" signature="3265:3322" ph="INSERT INTO customers... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Plus.png" />
-    <entry file="file://$PROJECT_DIR$/sotrudniki.php">
+    <entry file="file://$PROJECT_DIR$/tables/sotrudniki.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
           <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
@@ -647,13 +688,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1493400997699" expanded="true" signature="3265:3322" ph="INSERT INTO customers... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db_test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        <state relative-caret-position="289">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
           <folding>
             <marker date="1493657217188" expanded="true" signature="199:223" ph="SELECT * FRO... sotrudniki" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/doljnost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
