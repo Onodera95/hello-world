@@ -36,7 +36,7 @@ if ( !empty($_POST)) {
     if ($valid) {
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO sotrudniki (family, name, otchestvo) values(?, ?, ?)";
+        $sql = "INSERT INTO sotrudniki ('family', 'name', 'otchestvo') VALUES (NULL, '$family','$name','$otchestvo')";
         $q = $pdo->prepare($sql);
         $q->execute(array($family, $name, $otchestvo));
         Database::disconnect();
@@ -62,7 +62,7 @@ if ( !empty($_POST)) {
             <div class="control-group <?php echo !empty($familyError)?'error':'';?>">
                 <label class="control-label">Фамилия</label>
                 <div class="controls">
-                    <input name="name" type="text"  placeholder="" value="<?php echo !empty($family)?$family:'';?>">
+                    <input name="family" type="text"  placeholder="" value="<?php echo !empty($family)?$family:'';?>">
                     <?php if (!empty($familyError)): ?>
                         <span class="help-inline"><?php echo $familyError;?></span>
                     <?php endif; ?>
@@ -80,7 +80,7 @@ if ( !empty($_POST)) {
             <div class="control-group <?php echo !empty($otchestvoError)?'error':'';?>">
                 <label class="control-label">Отчество</label>
                 <div class="controls">
-                    <input name="email" type="text" placeholder="" value="<?php echo !empty($otchestvo)?$otchestvo:'';?>">
+                    <input name="otchestvo" type="text" placeholder="" value="<?php echo !empty($otchestvo)?$otchestvo:'';?>">
                     <?php if (!empty($otchestvoError)): ?>
                         <span class="help-inline"><?php echo $otchestvoError;?></span>
                     <?php endif;?>
