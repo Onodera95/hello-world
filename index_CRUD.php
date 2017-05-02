@@ -1,6 +1,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link   href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -15,23 +17,24 @@
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Email Address</th>
-                <th>Mobile Number</th>
-                <th>Action</th>
+                <th>ID</th>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>
             </tr>
             </thead>
             <tbody>
             <?php
-            include 'connection_db.php';
+            include 'con_db_CRUD.php';
             $pdo = Database::connect();
-            $sql = 'SELECT * FROM customers ORDER BY id DESC';
+            $sql = 'SELECT * FROM sotrudniki ORDER BY id DESC';
             foreach ($pdo->query($sql) as $row) {
                 echo '<tr>';
+                echo '<td>'. $row['id'] . '</td>';
+                echo '<td>'. $row['family'] . '</td>';
                 echo '<td>'. $row['name'] . '</td>';
-                echo '<td>'. $row['email'] . '</td>';
-                echo '<td>'. $row['mobile'] . '</td>';
-                echo '<td><a class="btn" href="read.php?id='.$row['id'].'">Read</a></td>';
+                echo '<td>'. $row['otchestvo'] . '</td>';
+                echo '<td><a class="btn" href="read_CRUD.php?id='.$row['id'].'">Read</a></td>';
                 echo '</tr>';
             }
             Database::disconnect();
