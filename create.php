@@ -18,7 +18,7 @@ if(isset($_POST['family']) && isset($_POST['name'])&& isset($_POST['otchestvo'])
     $otchestvo = htmlentities(mysqli_real_escape_string($link, $_POST['otchestvo']));
 
     // создание строки запроса
-    $query ="INSERT INTO technical_security.sotrudniki VALUES (NULL, '$family','$name','$otchestvo')";
+    $query ="INSERT INTO technical_security.sotrudniki ('id', 'family', 'name') VALUES (NULL, '$family','$name','$otchestvo')";
 
     // выполняем запрос
     $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
@@ -31,7 +31,7 @@ if(isset($_POST['family']) && isset($_POST['name'])&& isset($_POST['otchestvo'])
 }
 ?>
 <h2>Добавить новую модель</h2>
-<form method="POST">
+<form action="index.php" method="POST">
     <p>Фамилия:<br>
         <input type="text" name="family" /></p>
     <p>Имя:<br>
