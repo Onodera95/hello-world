@@ -2,7 +2,7 @@
 class Database
 {
     private static $dbName = 'technical_security' ;
-    private static $dbHost = 'kurs.loc' ;
+    private static $dbHost = '127.0.0.1' ;
     private static $dbUsername = 'root';
     private static $dbUserPassword = '';
 

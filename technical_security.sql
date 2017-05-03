@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 -- Структура таблицы `doljnost`
 --
 
+use technical_security;
+
 CREATE TABLE `doljnost` (
   `id` int(11) NOT NULL,
   `name` text
