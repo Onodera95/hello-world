@@ -1,8 +1,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link   href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <script src="../bootstrap/js/jquery-3.2.1.min.js" > </script>
+    <script src="../bootstrap/js/bootstrap.min.js" > </script>
 </head>
 
 <body>
@@ -34,7 +36,13 @@
                 echo '<td>'. $row['family'] . '</td>';
                 echo '<td>'. $row['name'] . '</td>';
                 echo '<td>'. $row['otchestvo'] . '</td>';
-                echo '<td><a class="btn" href="read_CRUD.php?id='.$row['id'].'">Read</a></td>';
+                echo '<td width=250>';
+                echo '<a class="btn" href="read_CRUD.php?id='.$row['id'].'">Read</a>';
+                echo ' ';
+                echo '<a class="btn btn-success" href="update_CRUD.php?id='.$row['id'].'">Update</a>';
+                echo ' ';
+                echo '<a class="btn btn-danger" href="delete_CRUD.php?id='.$row['id'].'">Delete</a>';
+                echo '</td>';
                 echo '</tr>';
             }
             Database::disconnect();
