@@ -3,22 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>Вводный инструктаж</title>
-    <style type="text/css">
-        TABLE {
-            width: 300px; /* Ширина таблицы */
-            border-collapse: collapse; /* Убираем двойные линии между ячейками */
-        }
-        TH {
-            padding: 10px; /* Поля вокруг содержимого таблицы */
-            border: 1px solid black; /* Параметры рамки */
-        }
-        TD {
-            /*background: #b0e0e6; /* Цвет фона */
-            padding: 5px; /* Поля вокруг содержимого таблицы */
-            border: 1px solid black; /* Параметры рамки */
-            text-align: center; /* Выравнивание текста по левому краю */
-        }
-    </style>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <script src="../bootstrap/js/jquery-3.2.1.min.js" > </script>
+    <script src="../bootstrap/js/bootstrap.min.js" > </script>
 </head>
 
 <body>
@@ -46,7 +34,7 @@
     </div>
 </div> <!-- /container -->
 
-    <p><input type="checkbox" name="a" value="Ознакомлен с инструктажем">Ознакомлен с инструктажем</p>
+    <p><input type="checkbox" name="a" value="Ознакомлен с инструктажем"> Ознакомлен с инструктажем</p>
     <p><a href="instruktaj.php"><button><style>="vertical-align: middle"</style>Подтвердить</button></a></p>
 
 </body>

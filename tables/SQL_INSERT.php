@@ -39,7 +39,7 @@ class SQL_INSERT
             echo "Ключ: $key; Значение: $value<br />\n";
         }*/
         if (is_array($values)){
-            //Очистить старые
+            //Очистить старые значения
             $this->values=array();
             $this->columns=array();
             foreach ($values as $key => $value){

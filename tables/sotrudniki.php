@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <title>Сотрудники</title>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <script src="../bootstrap/js/jquery-3.2.1.min.js" > </script>
