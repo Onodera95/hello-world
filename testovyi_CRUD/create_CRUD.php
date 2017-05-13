@@ -7,11 +7,19 @@ if ( !empty($_POST)) {
     $familyError = null;
     $nameError = null;
     $otchestvoError = null;
+    $doljnostError = null;
+    $instruktajError = null;
+    $statusError = null;
+
 
     // keep track post values
     $family = $_POST['family'];
     $name = $_POST['name'];
     $otchestvo = $_POST['otchestvo'];
+    $doljnost = $_POST['doljnost_id'];
+    $instruktaj = $_POST['instruktaj_id'];
+    $status = $_POST['status_id'];
+
 
     // validate input
     $valid = true;
@@ -32,15 +40,26 @@ if ( !empty($_POST)) {
         $valid = false;
     }
 
+    $valid = true;
+    if (empty($doljnost)) {
+        $doljnostError = 'Выберите должность';
+        $valid = false;
+    }
+    $valid = true;
+    if (empty($instruktaj)) {
+        $instruktajError = 'Выберите инструктаж';
+        $valid = false;
+    }
+
     // insert data
     if ($valid) {
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO sotrudniki ('family', 'name', 'otchestvo') VALUES (NULL, '$family','$name','$otchestvo')";
+        $sql = "INSERT INTO `sotrudniki` ('family', 'name', 'otchestvo', 'doljnost_id', 'instruktaj_id', 'status_id') VALUES ('$family','$name','$otchestvo', '$doljnost', '$instruktaj', '$status')";
         $q = $pdo->prepare($sql);
-        $q->execute(array($family, $name, $otchestvo));
+        $q->execute(array($family, $name, $otchestvo, $doljnost, $instruktaj, $status));
         Database::disconnect();
-        header("Location: index_CRUD.php");
+        header("Location: ../testovyi_CRUD/index_CRUD.php");
     }
 }
 ?>
@@ -88,6 +107,24 @@ if ( !empty($_POST)) {
                     <?php if (!empty($otchestvoError)): ?>
                         <span class="help-inline"><?php echo $otchestvoError;?></span>
                     <?php endif;?>
+                </div>
+            </div>
+            <div class="control-group <?php echo !empty($doljnostError)?'error':'';?>">
+                <label class="control-label">Должность</label>
+                <div class="controls">
+                    <input name="doljnots_id" type="text"  placeholder="" value="<?php echo !empty($doljnost)?$doljnost:'';?>">
+                    <?php if (!empty($doljnostError)): ?>
+                        <span class="help-inline"><?php echo $doljnostError;?></span>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="control-group <?php echo !empty($instruktajError)?'error':'';?>">
+                <label class="control-label">Инструктаж</label>
+                <div class="controls">
+                    <input name="instruktaj_id" type="text"  placeholder="" value="<?php echo !empty($instruktaj)?$instruktaj:'';?>">
+                    <?php if (!empty($instruktajError)): ?>
+                        <span class="help-inline"><?php echo $instruktajError;?></span>
+                    <?php endif; ?>
                 </div>
             </div>
 

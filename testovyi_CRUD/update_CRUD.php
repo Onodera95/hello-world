@@ -15,12 +15,18 @@ if ( !empty($_POST)) {
     $familyError = null;
     $nameError = null;
     $otchestvoError = null;
+    $doljnostError = null;
+    $instructajError = null;
+    $statusError = null;
 
 
     // keep track post values
-    $family = $_POST['name'];
-    $name = $_POST['email'];
-    $otchestvo = $_POST['mobile'];
+    $family = $_POST['family'];
+    $name = $_POST['name'];
+    $otchestvo = $_POST['otchestvo'];
+    $doljnost = $_POST['doljnost'];
+    $instructaj = $_POST['instruktaj'];
+    $status = $_POST['status'];
 
     // validate input
     $valid = true;
@@ -37,7 +43,7 @@ if ( !empty($_POST)) {
 
     $valid = true;
     if (empty($otchestvo)) {
-        $otchestvoError = 'Введите отчество';
+        $otchestvo = 'Введите отчество';
         $valid = false;
     }
 
@@ -49,7 +55,7 @@ if ( !empty($_POST)) {
         $q = $pdo->prepare($sql);
         $q->execute(array($family, $name, $otchestvo, $id));
         Database::disconnect();
-        header("Location: index_CRUD.php");
+        header("Location: ../tables/sotrudniki.php");
     }
 } else {
     $pdo = Database::connect();

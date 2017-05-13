@@ -25,29 +25,42 @@
                 <th>Статус</th>
             </tr>
             </thead>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <!-- /присоединить к БД/ -->
-            </tr>
             <tbody>
-
+            <?php
+            include '../testovyi_CRUD/con_db_CRUD.php';
+            $pdo = Database::connect();
+            $sql = 'SELECT * FROM sotrudniki ORDER BY id DESC';
+            foreach ($pdo->query($sql) as $row) {
+                echo '<tr>';
+                echo '<td>'. $row['id'] . '</td>';
+                echo '<td>'. $row['family'] . '</td>';
+                echo '<td>'. $row['name'] . '</td>';
+                echo '<td>'. $row['otchestvo'] . '</td>';
+                echo '<td>'. $row['doljnost_id'] . '</td>';
+                echo '<td>'. $row['instruktaj_id'] . '</td>';
+                echo '<td>'. $row['status_id'] . '</td>';
+                echo '<td width=250>';
+                echo '<a class="btn" href="../testovyi_CRUD/read_CRUD.php?id='.$row['id'].'">Read</a>';
+                echo ' ';
+                echo '<a class="btn btn-success" href="../testovyi_CRUD/update_CRUD.php?id='.$row['id'].'">Update</a>';
+                echo ' ';
+                echo '<a class="btn btn-danger" href="../testovyi_CRUD/delete_CRUD.php?id='.$row['id'].'">Delete</a>';
+                echo '</td>';
+                echo '</tr>';
+            }
+            Database::disconnect();
+            ?>
             </tbody>
         </table>
-        <p><a href="../create.php"><button>
+        <p><a href="../testovyi_CRUD/create_CRUD.php"><button>
                     <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
                     Добавить
                 </button></a></p>
-        <p><a href="../edit.php"><button>
+        <p><a href="../testovyi_CRUD/update_CRUD.php"><button>
                     <img src="../pictures/pencil.png" width="20px" alt="" style="vertical-align:middle">
                     Редактировать
                 </button></a></p>
-        <p><a href="../delete.php"><button>
+        <p><a href="../testovyi_CRUD/delete_CRUD.php"><button>
                 <img src="../pictures/close.png" width="20px" alt="" style="vertical-align:middle">
                 Удалить
             </button></a></p>

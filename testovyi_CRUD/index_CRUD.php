@@ -29,13 +29,16 @@
             <?php
             include 'con_db_CRUD.php';
             $pdo = Database::connect();
-            $sql = 'SELECT * FROM sotrudniki ORDER BY id DESC';
+            $sql = 'SELECT * FROM `sotrudniki` ORDER BY `id` DESC';
             foreach ($pdo->query($sql) as $row) {
                 echo '<tr>';
                 echo '<td>'. $row['id'] . '</td>';
                 echo '<td>'. $row['family'] . '</td>';
                 echo '<td>'. $row['name'] . '</td>';
                 echo '<td>'. $row['otchestvo'] . '</td>';
+                echo '<td>'. $row['doljnost_id'] . '</td>';
+                echo '<td>'. $row['instruktaj_id'] . '</td>';
+                echo '<td>'. $row['status_id'] . '</td>';
                 echo '<td width=250>';
                 echo '<a class="btn" href="read_CRUD.php?id='.$row['id'].'">Read</a>';
                 echo ' ';
