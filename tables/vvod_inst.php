@@ -1,5 +1,4 @@
 <html>
-<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Вводный инструктаж</title>
@@ -34,8 +33,8 @@
     </div>
 </div> <!-- /container -->
 
-    <p><input type="checkbox" name="a" value="Ознакомлен с инструктажем"> Ознакомлен с инструктажем</p>
-    <p><a href="instruktaj.php"><button><style>="vertical-align: middle"</style>Подтвердить</button></a></p>
+    <p align="center"><input type="checkbox" name="a" value="Ознакомлен с инструктажем"> Ознакомлен с инструктажем</p>
+    <p align="center"><a href="instruktaj.php"><button><style>="vertical-align: middle"</style>Подтвердить</button></a></p>
 
 </body>
 </html>
