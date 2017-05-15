@@ -21,6 +21,12 @@ class SQL_INSERT
 
 
         $this ->SQL = "INSERT INTO `" .  $this->table . "`  ($c)  " . " VALUES ($d)";
+        return $this->exec();
+    }
+    
+    private function exec(){
+        //TODO Выполнить готовый запрос
+        
     }
 
     public function setTable($tableName = ''){
