@@ -17,16 +17,26 @@
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
-                <th>ID</th>
+                <th>№</th>
                 <th>Описание</th>
             </tr>
             </thead>
-            <tr>
-                <td>1</td>
-                <td>Ссылка на PDF</td>
-                <!-- /присоединить к БД/ -->
-            </tr>
             <tbody>
+            <?php
+            $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
+            $db->query('SET NAMES UTF8');
+            $sql = 'SELECT * FROM `vvod_inst`';
+            $result = $db->query($sql);
+            // while ($value = $result->fetch_assoc())
+            foreach ($db->query($sql) as $value){
+                echo '<tr>';
+                echo '<td>'. $value['id'] . '</td>';
+                echo '<td>'. $value['description'] . '</td>';
+                //echo '<td>'. $value['instruktaj_id'] . '</td>';
+            }
+            //header('location:sotrudniki.php');
+            ?>
+
 
             </tbody>
         </table>

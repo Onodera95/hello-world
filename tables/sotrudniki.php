@@ -21,38 +21,40 @@
                 <th>Имя</th>
                 <th>Отчество</th>
                 <th>Должность</th>
-                <th>Инструктаж</th>
                 <th>Статус</th>
+                <th>Опции</th>
             </tr>
             </thead>
             <tbody>
             <?php
-            include '../testovyi_CRUD/con_db_CRUD.php';
-            $pdo = Database::connect();
-            $sql = 'SELECT * FROM sotrudniki ORDER BY id DESC';
-            foreach ($pdo->query($sql) as $row) {
-                echo '<tr>';
-                echo '<td>'. $row['id'] . '</td>';
-                echo '<td>'. $row['family'] . '</td>';
-                echo '<td>'. $row['name'] . '</td>';
-                echo '<td>'. $row['otchestvo'] . '</td>';
-                echo '<td>'. $row['doljnost_id'] . '</td>';
-                echo '<td>'. $row['instruktaj_id'] . '</td>';
-                echo '<td>'. $row['status_id'] . '</td>';
-                echo '<td width=250>';
-                echo '<a class="btn" href="../testovyi_CRUD/read_CRUD.php?id='.$row['id'].'">Read</a>';
-                echo ' ';
-                echo '<a class="btn btn-success" href="../testovyi_CRUD/update_CRUD.php?id='.$row['id'].'">Update</a>';
-                echo ' ';
-                echo '<a class="btn btn-danger" href="../testovyi_CRUD/delete_CRUD.php?id='.$row['id'].'">Delete</a>';
-                echo '</td>';
-                echo '</tr>';
-            }
-            Database::disconnect();
+            $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
+            $db->query('SET NAMES UTF8');
+            $sql = 'SELECT * FROM `sotrudniki`';
+            $result = $db->query($sql);
+            // while ($value = $result->fetch_assoc())
+                foreach ($db->query($sql) as $value){
+                    echo '<tr>';
+                    echo '<td>'. $value['id'] . '</td>';
+                    echo '<td>'. $value['family'] . '</td>';
+                    echo '<td>'. $value['name'] . '</td>';
+                    echo '<td>'. $value['otchestvo'] . '</td>';
+                    echo '<td>'. $value['doljnost_id'] . '</td>';
+                    echo '<td>'. $value['status_id'] . '</td>';
+
+                    echo '<td width=250>';
+                    echo '<a class="btn" href="read_CRUD.php?id='.$value['id'].'">Read</a>';
+                    echo ' ';
+                    echo '<a class="btn btn-success" href="update_CRUD.php?id='.$value['id'].'">Update</a>';
+                    echo ' ';
+                    echo '<a class="btn btn-danger" href="delete_CRUD.php?id='.$value['id'].'">Delete</a>';
+                    echo '</td>';
+                    echo '</tr>';
+                }
+            //header('location:sotrudniki.php');
             ?>
             </tbody>
         </table>
-        <p><a href="../testovyi_CRUD/create_CRUD.php"><button>
+        <p><a href="../form/sotrudniki_form.php"><button>
                     <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
                     Добавить
                 </button></a></p>

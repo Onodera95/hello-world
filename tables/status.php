@@ -18,17 +18,26 @@
             <thead>
             <tr>
 
+                <th>№</th>
                 <th>Статус</th>
-                <th>Сотрудник</th>
+
+
             </tr>
             </thead>
-            <tr>
-                <td>1 или 0</td>
-                <td>1</td>
-                <!-- /присоединить к БД/ -->
-            </tr>
             <tbody>
+<?php
+$db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
+$db->query('SET NAMES UTF8');
+$sql = 'SELECT * FROM `status`';
+$result = $db->query($sql);
+// while ($value = $result->fetch_assoc())
+foreach ($db->query($sql) as $value) {
+    echo '<tr>';
+    echo '<td>' . $value['id'] . '</td>';
+    echo '<td>' . $value['status'] . '</td>';
+}
 
+    ?>
             </tbody>
         </table>
     </div>

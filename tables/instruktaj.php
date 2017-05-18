@@ -19,19 +19,31 @@
             <tr>
                 <th>ID</th>
                 <th>Наименование</th>
-                <th>Описание</th>
-                <th>Дополнительная иниформация</th>
             </tr>
             </thead>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>ссылка на таблицу dop_info</td>
-                <!-- /присоединить к БД/ -->
-            </tr>
             <tbody>
+            <?php
+            $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
+            $db->query('SET NAMES UTF8');
+            $sql = 'SELECT * FROM `instruktaj`';
+            $result = $db->query($sql);
+            // while ($value = $result->fetch_assoc())
+            foreach ($db->query($sql) as $value){
+                echo '<tr>';
+                echo '<td>'. $value['id'] . '</td>';
+                echo '<td>'. $value['name'] . '</td>';
 
+                echo '<td width=250>';
+                echo '<a class="btn btn-success" href="pervich_inst.php">Подробнее</a>';
+                echo '</td>';
+
+                echo '<td width=250>';
+                echo '<a class="btn btn-success" href="vvod_inst.php">Вводный</a>';
+                echo '</td>';
+                echo '</tr>';
+            }
+            //header('location:sotrudniki.php');
+            ?>
             </tbody>
         </table>
     </div>
