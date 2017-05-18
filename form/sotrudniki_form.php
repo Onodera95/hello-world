@@ -11,7 +11,7 @@
  */
 ?>
 
-<form action="sotrudniki.php">
+<form action="../class/sotrudniki.php">
     Фамилия:<br>
     <input type="text" name="family" value=""><br>
     Имя:<br>

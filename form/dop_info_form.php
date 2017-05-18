@@ -8,7 +8,7 @@
 
 ?>
 
-<form action="dop_info.php">
+<form action="../class/dop_info.php">
 
     Инструктаж:<br>
     <select name="instruktaj_id" value="">

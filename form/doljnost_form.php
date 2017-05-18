@@ -8,7 +8,7 @@
 
 ?>
 
-<form action="doljnost.php">
+<form action="../class/doljnost.php">
     Название:<br>
     <input type="text" name="name" value=""><br>
     <input type="submit" value="Сохранить">

@@ -8,7 +8,7 @@
 
 namespace form;
 
-require_once ('../tables/SQL_INSERT.php');
+require_once('../class/SQL_INSERT.php');
 use tables\SQL_INSERT;
 
 class sotrudniki
