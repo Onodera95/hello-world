@@ -56,14 +56,7 @@ class sotrudniki
             echo 'ОШИБКА. Выберите Должность';
             $valid = false;
         }
-
-        if (isset($_REQUEST['instruktaj_id']) && $_REQUEST['instruktaj_id'] != ''){
-            $this->data['instruktaj_id'] = $_REQUEST['instruktaj_id'];
-        }
-        else{
-            echo 'ОШИБКА. Выберите Инструктаж';
-            $valid = false;
-        }
+        
 
         if (isset($_REQUEST['status_id']) && $_REQUEST['status_id'] != ''){
             $this->data['status_id'] = $_REQUEST['status_id'];
@@ -80,9 +73,7 @@ class sotrudniki
         $r=new SQL_INSERT();
         $r->setTable($this->getTables());
         $r->setValues($this->data);
-        $r->Insert();
-
-        return $r->SQL;
+        return $r->Insert();
 
     }
 

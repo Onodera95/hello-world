@@ -16,3 +16,7 @@ $arr = array('family'=>"Sokolova", 'name'=>"Lidia", 'otchestvo'=>"Alexsandrovna"
 $t->setValues($arr);
 $t->Insert();
 echo $t->SQL;
+
+//TODO Поискать информацию про Singleton на php в интернете
+
+//TODO Сделать единый класс по подключению к бд

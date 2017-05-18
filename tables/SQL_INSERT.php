@@ -26,7 +26,13 @@ class SQL_INSERT
     
     private function exec(){
         //TODO Выполнить готовый запрос
-        
+        $db = new \mysqli('127.0.0.1', 'root', '', 'technical_security');
+        $db->query('SET NAMES UTF8');
+        if (is_object($db)){
+
+            return $db->query($this->SQL);
+        }
+        return false;
     }
 
     public function setTable($tableName = ''){
