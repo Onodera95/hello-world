@@ -9,22 +9,33 @@
 /**
  * Здесь будет жить форма html
  */
+require_once '../class/connect.php';
+$db = \sql\connect::getInstance();
+
+require_once '../class/sotrudniki.php';
+
+$ob = new \form\sotrudniki();
+$data = $ob->form();
+$stop = true;
+if ($data !== false){
+    $stop = false;
+}
 ?>
 
-<form action="../class/sotrudniki.php">
+<form action="sotrudniki_create.php" method="post">
+    <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
     Фамилия:<br>
-    <input type="text" name="family" value=""><br>
+    <input type="text" name="family" value="<?= !$stop?$data['family']:'' ?>"><br>
     Имя:<br>
-    <input type="text" name="name" value=""><br><br>
+    <input type="text" name="name" value="<?= !$stop?$data['name']:'' ?>"><br><br>
     Отчество:<br>
-    <input type="text" name="otchestvo" value=""><br><br>
+    <input type="text" name="otchestvo" value="<?= !$stop?$data['otchestvo']:'' ?>"><br><br>
     Должность:<br>
     <select name="doljnost_id" value="">
         <option value="0">Выберите значение</option>
 
         <?php
-        $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
-        $db->query('SET NAMES UTF8');
+
         $sql = 'SELECT * FROM `doljnost`';
         $result = $db->query($sql);
         while ($value = $result->fetch_assoc()){
@@ -33,15 +44,15 @@
 
         ?>
 
-        </select><br>
+    </select><br>
 
     Статус:<br>
     <select name="status_id" value="">
         <option value="0">Выберите значение</option>
 
         <?php
-        $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
-        $db->query('SET NAMES UTF8');
+
+
         $sql = 'SELECT * FROM `status`';
         $result = $db->query($sql);
         while ($value = $result->fetch_assoc()){
@@ -51,5 +62,5 @@
         ?>
 
     </select><br>
-    <input type="submit" value="Сохранить">
+    <input type="submit" value="Обновить">
 </form>

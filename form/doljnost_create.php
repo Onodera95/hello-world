@@ -16,7 +16,7 @@ if ($data !== false){
 
 ?>
 
-<form action="../form/doljnost_form.php" method="post">
+<form action="doljnost_create.php" method="post">
     Название:<br>
     <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
     <input type="text" name="name" value="<?= !$stop?$data['name']:'' ?>"><br>

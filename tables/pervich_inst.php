@@ -23,22 +23,17 @@
             </thead>
             <tbody>
             <?php
-            $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
-            $db->query('SET NAMES UTF8');
-            $sql = 'SELECT * FROM `pervichnyi_inst`';
-            $result = $db->query($sql);
-            // while ($value = $result->fetch_assoc())
-            foreach ($db->query($sql) as $value){
+            require_once '../class/pervichnyi_inst.php';
+            $model = new \form\pervichnyi_inst();
+            $result = $model->select();
+            foreach ($result as $value){
                 echo '<tr>';
                 echo '<td>'. $value['id'] . '</td>';
                 echo '<td>'. $value['description'] . '</td>';
-                //echo '<td>'. $value['instruktaj_id'] . '</td>';
+                echo '<td>'. $value['instruktaj_id'] . '</td>';
             }
-            //header('location:sotrudniki.php');
+
             ?>
-
-
-
 
             </tbody>
         </table>

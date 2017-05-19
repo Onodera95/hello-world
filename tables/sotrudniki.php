@@ -27,12 +27,11 @@
             </thead>
             <tbody>
             <?php
-            $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
-            $db->query('SET NAMES UTF8');
-            $sql = 'SELECT * FROM `sotrudniki`';
-            $result = $db->query($sql);
-            // while ($value = $result->fetch_assoc())
-                foreach ($db->query($sql) as $value){
+
+            require_once '../class/sotrudniki.php';
+            $model = new \form\sotrudniki();
+            $result = $model->select();
+                foreach ($result as $value){
                     echo '<tr>';
                     echo '<td>'. $value['id'] . '</td>';
                     echo '<td>'. $value['family'] . '</td>';
@@ -42,31 +41,20 @@
                     echo '<td>'. $value['status_id'] . '</td>';
 
                     echo '<td width=250>';
-                    echo '<a class="btn" href="read_CRUD.php?id='.$value['id'].'">Read</a>';
+                    echo '<a class="btn btn-success" href="../form/sotrudniki_create.php?id='.$value['id'].'">Update</a>';
                     echo ' ';
-                    echo '<a class="btn btn-success" href="update_CRUD.php?id='.$value['id'].'">Update</a>';
-                    echo ' ';
-                    echo '<a class="btn btn-danger" href="delete_CRUD.php?id='.$value['id'].'">Delete</a>';
+                    echo '<a class="btn btn-danger" href="../form/sotrudniki_delete.php?id='.$value['id'].'">Delete</a>';
                     echo '</td>';
                     echo '</tr>';
                 }
-            //header('location:sotrudniki.php');
+
             ?>
             </tbody>
         </table>
-        <p><a href="../form/sotrudniki_form.php"><button>
+        <p><a href="../form/sotrudniki_create.php"><button>
                     <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
                     Добавить
                 </button></a></p>
-        <p><a href="../testovyi_CRUD/update_CRUD.php"><button>
-                    <img src="../pictures/pencil.png" width="20px" alt="" style="vertical-align:middle">
-                    Редактировать
-                </button></a></p>
-        <p><a href="../testovyi_CRUD/delete_CRUD.php"><button>
-                <img src="../pictures/close.png" width="20px" alt="" style="vertical-align:middle">
-                Удалить
-            </button></a></p>
-
 
     </div>
 </div> <!-- /container -->

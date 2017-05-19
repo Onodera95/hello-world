@@ -5,31 +5,12 @@
  * Date: 19.05.2017
  * Time: 15:21
  */
-require_once "class/SQL_DELETE.php";
+require_once "../class/sotrudniki.php";
 
-use sql\SQL_DELETE as del;
-
-$db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
-$db->query('SET NAMES UTF8');
-$id = 0;
-
-if ( !empty($_GET['id'])) {
-    $id = $_REQUEST['id'];
-}
-
-if ( !empty($_POST)) {
-    // keep track post values
-    $id = $_POST['id'];
-
-    // delete data
-    $pdo = Database::connect();
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "DELETE FROM `sotrudniki`  WHERE `id` = ?";
-    $q = $pdo->prepare($sql);
-    $q->execute(array($id));
-    Database::disconnect();
-    header("Location: index_CRUD.php");
-
+$ob = new \form\sotrudniki();
+$data = $ob->delete();
+if (is_bool($data)){
+    header("Location: ../tables/sotrudniki.php");
 }
 ?>
 
@@ -51,12 +32,12 @@ if ( !empty($_POST)) {
             <h3>Delete a Customer</h3>
         </div>
 
-        <form class="form-horizontal" action="delete_CRUD.php" method="post">
-            <input type="hidden" name="id" value="<?php echo $id;?>"/>
-            <p class="alert alert-error">Are you sure to delete ?</p>
+        <form class="form-horizontal" action='../form/sotrudniki_delete.php' method="post">
+            <input type="hidden" name="id" value="<?= $data['id']?>"/>
+            <p class="alert alert-error">Вы действительно хотите удалить запись "<?=$data['name']?>" ?</p>
             <div class="form-actions">
-                <button type="submit" class="btn btn-danger">Yes</button>
-                <a class="btn" href="index_CRUD.php">No</a>
+                <button type="submit" class="btn btn-danger">Да</button>
+                <a class="btn" href="../tables/sotrudniki.php">Нет</a>
             </div>
         </form>
     </div>

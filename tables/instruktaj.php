@@ -23,12 +23,10 @@
             </thead>
             <tbody>
             <?php
-            $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
-            $db->query('SET NAMES UTF8');
-            $sql = 'SELECT * FROM `instruktaj`';
-            $result = $db->query($sql);
-            // while ($value = $result->fetch_assoc())
-            foreach ($db->query($sql) as $value){
+            require_once '../class/instruktaj.php';
+            $model = new \form\instruktaj();
+            $result = $model->select();
+            foreach ($result as $value){
                 echo '<tr>';
                 echo '<td>'. $value['id'] . '</td>';
                 echo '<td>'. $value['name'] . '</td>';
@@ -46,6 +44,10 @@
             ?>
             </tbody>
         </table>
+        <p><a href="../form/instruktaj_create.php"><button>
+                    <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
+                    Добавить
+                </button></a></p>
     </div>
 </div> <!-- /container -->
 </body>

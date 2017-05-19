@@ -36,17 +36,19 @@
                         echo '<td>'. $value['name'] . '</td>';
 
                         echo '<td width=250>';
-                        echo '<a class="btn btn-success" href="../form/doljnost_form.php?id='.$value['id'].'">Update</a>';
+                        echo '<a class="btn btn-success" href="../form/doljnost_create.php?id='.$value['id'].'">Update</a>';
                         echo ' ';
                         echo '<a class="btn btn-danger" href="../form/doljnost_delete.php?id='.$value['id'].'">Delete</a>';
                         echo '</td>';
                         echo '</tr>';
                     }
-                //header('location:sotrudniki.php');
                 ?>
             </tbody>
         </table>
-        
+        <p><a href="../form/doljnost_create.php"><button>
+                    <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
+                    Добавить
+                </button></a></p>
         
     </div>
 </div> <!-- /container -->
