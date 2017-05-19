@@ -1,5 +1,8 @@
 <?php
-namespace tables;
+
+namespace sql;
+
+use sql\connect;
 /**
  * Created by PhpStorm.
  * User: user
@@ -8,27 +11,22 @@ namespace tables;
  */
 class SQL_DELETE
 {
-    private $values;
-    private $columns;
+    //private $id;
     private $table;
     public $SQL;
 
 
-    public function Delete() {
+    public function Delete($id) {
+        
+        $this ->SQL = "DELETE FROM `" .  $this->table . "`  " . "WHERE id=$id";
 
-        $this ->SQL = "DELETE FROM `" .  $this->table . "`  " . WHERE ;
         return $this->exec();
     }
 
     private function exec(){
-        //TODO Выполнить готовый запрос
-        $db = new \mysqli('127.0.0.1', 'root', '', 'technical_security');
-        $db->query('SET NAMES UTF8');
-        if (is_object($db)){
-
-            return $db->query($this->SQL);
-        }
-        return false;
+        $db = connect::getInstance();
+        return $db->query($this->SQL);
+        
     }
 
     public function setTable($tableName = ''){
@@ -37,28 +35,6 @@ class SQL_DELETE
         }
         else{
             $this->table=$tableName;
-        }
-    }
-
-
-    public function setValues($values){
-        /*$arr = array('id'=>"1", 'матом'=>"two", 'key3'=>"three");
-        foreach ($arr as $key => $value){
-            echo "Ключ: $key; Значение: $value<br />\n";
-        }*/
-        if (is_array($values)){
-            //Очистить старые значения
-            $this->values=array();
-            $this->columns=array();
-            foreach ($values as $key => $value){
-                //array()
-                $this->values[]=$value;
-                $this->columns[]=$key;
-            }
-            return true;
-        }
-        else{
-            return false;
         }
     }
 }

@@ -9,7 +9,7 @@
 namespace form;
 
 require_once('../class/SQL_INSERT.php');
-use tables\SQL_INSERT;
+use sql\SQL_INSERT;
 
 class sotrudniki
 {
@@ -73,7 +73,7 @@ class sotrudniki
         $r=new SQL_INSERT();
         $r->setTable($this->getTables());
         $r->setValues($this->data);
-        return $r->Insert();
+        return $r->query();
 
     }
 

@@ -1,5 +1,5 @@
 <?php
-namespace tables;
+namespace sql;
 /**
  * Created by PhpStorm.
  * User: stud03
@@ -15,7 +15,7 @@ class SQL_INSERT
 
 
     
-    public function Insert() {
+    public function query() {
         $c = '`'.implode('`, `', $this->columns)."`";
         $d = '"'.implode('", "', $this->values).'"';
 
@@ -25,14 +25,8 @@ class SQL_INSERT
     }
     
     private function exec(){
-        //TODO Выполнить готовый запрос
-        $db = new \mysqli('127.0.0.1', 'root', '', 'technical_security');
-        $db->query('SET NAMES UTF8');
-        if (is_object($db)){
-
-            return $db->query($this->SQL);
-        }
-        return false;
+        $db = connect::getInstance();
+        return $db->query($this->SQL);
     }
 
     public function setTable($tableName = ''){

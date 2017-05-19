@@ -9,7 +9,7 @@
 namespace form;
 
 require_once('../class/SQL_INSERT.php');
-use tables\SQL_INSERT;
+use sql\SQL_INSERT;
 class pervichnyi_inst
 {
 

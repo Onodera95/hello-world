@@ -1,6 +1,8 @@
 <?php
-$host = '127.0.0.1'; // адрес сервера
-$database = 'technical_security'; // имя базы данных
-$user = 'root'; // имя пользователя
-$password = ''; // пароль
+define('HOST', 'sql11.freemysqlhosting.net'); // адрес сервера
+define('DB','sql11175374'); // имя базы данных
+define('USER','sql11175374'); // имя пользователя
+define('PASSWORD', 'dcpc2nDHDG'); // пароль
+define('PORT','3306');
+
 ?>

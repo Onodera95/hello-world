@@ -1,6 +1,6 @@
 <?php
 
-namespace tables;
+namespace sql;
 /**
  * Created by PhpStorm.
  * User: user
@@ -15,21 +15,25 @@ class SQL_UPDATE
     public $SQL;
 
 
-    public function Delete() {
-
-        $this ->SQL = "UPDATE `" .  $this->table . "` SET " . WHERE ;
+    public function query($id) {
+        
+        $set = '';
+        $i = 1;
+        $count = count($this->columns);
+        foreach ($this->columns as $key=>$value){
+            $set .= "$value = '".$this->values[$key]."'";
+            if ($count<$i){
+                $set .= ", ";
+            }
+            $i++;
+        }
+        $this ->SQL = "UPDATE `" .  $this->table . "` SET " . $set . " WHERE id=$id" ;
         return $this->exec();
     }
 
     private function exec(){
-        //TODO Выполнить готовый запрос
-        $db = new \mysqli('127.0.0.1', 'root', '', 'technical_security');
-        $db->query('SET NAMES UTF8');
-        if (is_object($db)){
-
-            return $db->query($this->SQL);
-        }
-        return false;
+        $db = connect::getInstance();
+        return $db->query($this->SQL);
     }
 
     public function setTable($tableName = ''){

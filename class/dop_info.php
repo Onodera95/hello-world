@@ -9,7 +9,7 @@
 namespace form;
 
 require_once('../class/SQL_INSERT.php');
-use tables\SQL_INSERT;
+use sql\SQL_INSERT;
 class dop_info
 {
     private $data; //Обработанные данные, которые мы получили от пользователя
@@ -61,7 +61,7 @@ class dop_info
         $r=new SQL_INSERT();
         $r->setTable($this->getTables());
         $r->setValues($this->data);
-        $r->Insert();
+        $r->query();
 
         return $r->SQL;
 

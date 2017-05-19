@@ -14,6 +14,7 @@
         <h3>Должность сотрудников</h3>
     </div>
     <div class="row">
+
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
@@ -24,20 +25,20 @@
             </thead>
             <tbody>
                 <?php
-                    $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
-                    $db->query('SET NAMES UTF8');
-                    $sql = 'SELECT * FROM `doljnost`';
-                    $result = $db->query($sql);
-                    // while ($value = $result->fetch_assoc())
-                    foreach ($db->query($sql) as $value){
+                
+                    require_once '../class/doljnost.php';
+                    $model = new \form\doljnost();
+                    $result = $model->select();
+                        foreach ($result as $value)
+                    {
                         echo '<tr>';
                         echo '<td>'. $value['id'] . '</td>';
                         echo '<td>'. $value['name'] . '</td>';
 
                         echo '<td width=250>';
-                        echo '<a class="btn btn-success" href="update_CRUD.php?id='.$value['id'].'">Update</a>';
+                        echo '<a class="btn btn-success" href="../form/doljnost_form.php?id='.$value['id'].'">Update</a>';
                         echo ' ';
-                        echo '<a class="btn btn-danger" href="delete_CRUD.php?id='.$value['id'].'">Delete</a>';
+                        echo '<a class="btn btn-danger" href="../form/doljnost_delete.php?id='.$value['id'].'">Delete</a>';
                         echo '</td>';
                         echo '</tr>';
                     }
@@ -45,6 +46,8 @@
                 ?>
             </tbody>
         </table>
+        
+        
     </div>
 </div> <!-- /container -->
 </body>

@@ -55,7 +55,7 @@ if ( !empty($_POST)) {
         $q = $pdo->prepare($sql);
         $q->execute(array($family, $name, $otchestvo, $id));
         Database::disconnect();
-        header("Location: ../tables/sotrudniki.php");
+        header("Location: ../sql/sotrudniki.php");
     }
 } else {
     $pdo = Database::connect();
