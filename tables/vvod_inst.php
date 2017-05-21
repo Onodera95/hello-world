@@ -9,6 +9,33 @@
 </head>
 
 <body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../menu.php">ИЦ "Наш Город"</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../menu.php">Главная страница</a></li>
+
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="">Сотудники<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../tables/sotrudniki.php">Список</a></li>
+                    <li><a href="../tables/doljnost.php">Должности</a></li>
+                </ul>
+            </li>
+
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="">Список инструктажей<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../tables/pervich_inst.php">Первичный</a></li>
+                    <li><a href="../tables/vvod_inst.php">Вводный</a></li>
+                </ul>
+            </li>
+
+            <li><a href="../tables/dop_info.php">Дополнительная информация</a></li>
+            <li><a href="../tables/status.php">Статус</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
     <div class="row">
         <h3>Вводный инструктаж</h3>
@@ -16,12 +43,11 @@
     <div class="row">
         <table class="table table-striped table-bordered">
             <thead>
-            <tr>
-                <th>№</th>
-                <th>Описание</th>
-            </tr>
+
             </thead>
             <tbody>
+                <object><embed src="../Вводный%20инструктаж.pdf" width="1200" height="620" /></object>
+
             <?php
             require_once '../class/vvod_inst.php';
             $model = new \form\vvod_inst();
@@ -41,8 +67,8 @@
     </div>
 </div> <!-- /container -->
 
-    <p align="center"><input type="checkbox" name="a" value="Ознакомлен с инструктажем"> Ознакомлен с инструктажем</p>
-    <p align="center"><a href="instruktaj.php"><button><style>="vertical-align: middle"</style>Подтвердить</button></a></p>
+    <p align="center"><input type="checkbox" id="check" value="Ознакомлен с инструктажем"><label for="check">Ознакомлен с инструктажем</label> </p>
+    <p align="center"><a href="instruktaj.php" class="btn btn-success disabled"> Подтвердить </a></p>
 
 </body>
 </html>

@@ -21,36 +21,66 @@ if ($data !== false){
     $stop = false;
 }
 ?>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Сотрудники</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <script src="../bootstrap/js/jquery-3.2.1.min.js" > </script>
+    <script src="../bootstrap/js/bootstrap.min.js" > </script>
+</head>
+<body>
+<div class="container">
 
-<form action="sotrudniki_create.php" method="post">
+        <h1>Сотрудники</h1>
+
+    <div class="row">
+        <form action="sotrudniki_create.php" method="post">
     <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
-    Фамилия:<br>
-    <input type="text" name="family" value="<?= !$stop?$data['family']:'' ?>"><br>
-    Имя:<br>
-    <input type="text" name="name" value="<?= !$stop?$data['name']:'' ?>"><br><br>
-    Отчество:<br>
-    <input type="text" name="otchestvo" value="<?= !$stop?$data['otchestvo']:'' ?>"><br><br>
-    Должность:<br>
-    <select name="doljnost_id" value="">
-        <option value="0">Выберите значение</option>
 
-        <?php
+    <div class="form-group row">
+    <div class="col-xs-3" >
+        <label for="family">Фамилия</label>
+        <input type="text" class="form-control" name="family" value="<?= !$stop?$data['family']:'' ?>">
+    </div></div>
 
-        $sql = 'SELECT * FROM `doljnost`';
-        $result = $db->query($sql);
-        while ($value = $result->fetch_assoc()){
-            echo "<option value='" . $value['id'] . "'>" . $value['name']."</option>";
-        }
+    <div class="form-group row">
+        <div class="col-xs-3" >
+            <label for="name">Имя</label>
+            <input type="text" class="form-control" name="name" value="<?= !$stop?$data['name']:'' ?>">
+        </div></div>
 
-        ?>
+    <div class="form-group row">
+        <div class="col-xs-3" >
+            <label for="otchestvo">Отчество</label><br>
+            <input type="text" class="form-control" name="otchestvo" value="<?= !$stop?$data['otchestvo']:'' ?>">
+        </div></div>
 
-        </select><br>
+        <div class="form-group row">
+        <div class="col-xs-3" >
+            <label for="doljnost_id">Должность</label>
+            <select type="text" class="form-control" name="doljnost_id">
+                <option value="0">Выберите значение</option>
 
-    Статус:<br>
-    <select name="status_id" value="">
-        <option value="0">Выберите значение</option>
+                <?php
 
-        <?php
+                $sql = 'SELECT * FROM `doljnost`';
+                $result = $db->query($sql);
+                while ($value = $result->fetch_assoc()){
+                    echo "<option value='" . $value['id'] . "'>" . $value['name']."</option>";
+                }
+                ?>
+            </select>
+        </div></div>
+
+
+        <div class="form-group row">
+            <div class="col-xs-3" >
+                <label for="status_id">Статус</label>
+                <select type="text" class="form-control" name="status_id">
+                    <option value="0">Выберите значение</option>
+                <?php
 
 
         $sql = 'SELECT * FROM `status`';
@@ -58,9 +88,18 @@ if ($data !== false){
         while ($value = $result->fetch_assoc()){
             echo "<option value='" . $value['id'] . "'>" . $value['status']."</option>";
         }
-
         ?>
+                </select></div></div>
 
-    </select><br>
-    <input type="submit" value="Сохранить">
+
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary" >Сохранить изменения</button>
+        <a class="btn btn-default" href="../tables/sotrudniki.php">Отмена</a>
+    </div>
+
 </form>
+    </div>
+</div>
+</body>
+</html>
