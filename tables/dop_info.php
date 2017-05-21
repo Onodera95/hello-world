@@ -27,12 +27,10 @@
             </thead>
             <tbody>
             <?php
-            $db = new mysqli('127.0.0.1', 'root', '', 'technical_security');
-            $db->query('SET NAMES UTF8');
-            $sql = 'SELECT * FROM `dop_info`';
-            $result = $db->query($sql);
-            // while ($value = $result->fetch_assoc())
-            foreach ($db->query($sql) as $value){
+            require_once '../class/dop_info.php';
+            $model = new \form\dop_info();
+            $result = $model->select();
+            foreach ($result as $value){
                 echo '<tr>';
                 echo '<td>'. $value['id'] . '</td>';
                 echo '<td>'. $value['date'] . '</td>';
@@ -41,9 +39,9 @@
                 echo '<td>'. $value['status_id'] . '</td>';
 
                 echo '<td width=250>';
-                echo '<a class="btn btn-success" href="update_CRUD.php?id='.$value['id'].'">Update</a>';
+                echo '<a class="btn btn-success" href="../form/dop_info_create.php?id='.$value['id'].'">Update</a>';
                 echo ' ';
-                echo '<a class="btn btn-danger" href="delete_CRUD.php?id='.$value['id'].'">Delete</a>';
+                echo '<a class="btn btn-danger" href="../form/dop_info_delete.php?id='.$value['id'].'">Delete</a>';
                 echo '</td>';
                 echo '</tr>';
             }
@@ -51,6 +49,10 @@
             ?>
             </tbody>
         </table>
+        <p><a href="../form/dop_info_create.php"><button>
+                    <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
+                    Добавить
+                </button></a></p>
     </div>
 </div> <!-- /container -->
 </body>
