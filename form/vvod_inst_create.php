@@ -12,9 +12,9 @@
 require_once '../class/connect.php';
 $db = \sql\connect::getInstance();
 
-require_once '../class/pervichnyi_inst.php';
+require_once '../class/vvod_inst.php';
 
-$ob = new \form\pervichnyi_inst();
+$ob = new \form\vvod_inst();
 $data = $ob->form();
 $stop = true;
 if ($data !== false){
@@ -22,7 +22,7 @@ if ($data !== false){
 }
 ?>
 
-<form action="pervichnyi_inst_create.php" method="post">
+<form action="vvod_inst_create.php" method="post">
     <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
 
     Инструктаж:<br>

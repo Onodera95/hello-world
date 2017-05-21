@@ -45,7 +45,7 @@
                 echo '</td>';
                 echo '</tr>';
             }
-            //header('location:sotrudniki.php');
+
             ?>
             </tbody>
         </table>

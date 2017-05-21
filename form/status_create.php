@@ -12,9 +12,9 @@
 require_once '../class/connect.php';
 $db = \sql\connect::getInstance();
 
-require_once '../class/pervichnyi_inst.php';
+require_once '../class/status.php';
 
-$ob = new \form\pervichnyi_inst();
+$ob = new \form\status();
 $data = $ob->form();
 $stop = true;
 if ($data !== false){
@@ -22,27 +22,19 @@ if ($data !== false){
 }
 ?>
 
-<form action="pervichnyi_inst_create.php" method="post">
+<form action="status_create.php" method="post">
     <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
 
-    Инструктаж:<br>
-    <select name="instruktaj_id" value="">
+    Статус:<br>
+    <select name="status_id" value="">
         <option value="0">Выберите значение</option>
-
         <?php
-
-        $sql = 'SELECT * FROM `instruktaj`';
+        $sql = 'SELECT * FROM `status`';
         $result = $db->query($sql);
         while ($value = $result->fetch_assoc()){
-            echo "<option value='" . $value['id'] . "'>" . $value['name']."</option>";
+            echo "<option value='" . $value['id'] . "'>" . $value['status']."</option>";
         }
-
         ?>
-
-    </select><br>
-    Описание:<br>
-    <input type="text" name="description" value="<?= !$stop?$data['description']:'' ?>"><br>
-
     </select><br>
     <input type="submit" value="Сохранить">
 </form>
