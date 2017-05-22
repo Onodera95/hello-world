@@ -41,6 +41,10 @@
     <div class="row">
         <h3>Статус</h3>
     </div>
+    <p align="right"><a href="../form/status_create.php" class="btn btn-primary">
+            <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
+            Добавить
+        </a></p>
     <div class="row">
         <table class="table table-striped table-bordered">
             <thead>
@@ -71,11 +75,7 @@
                         }
                 ?>
             </tbody>
-        </table>
-         <p><a href="../form/status_create.php" class="btn btn-primary">
-                    <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
-                    Добавить
-                </a></p>
+        </table>         
     </div>
 </div> <!-- /container -->
 </body>

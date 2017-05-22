@@ -41,6 +41,10 @@
     <div class="row">
         <h3>Должность сотрудников</h3>
     </div>
+    <p align="right"><a href="../form/doljnost_create.php" class="btn btn-primary">
+            <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
+            Добавить
+        </a></p>
     <div class="row">
 
         <table class="table table-striped table-bordered">
@@ -72,11 +76,7 @@
                     }
                 ?>
             </tbody>
-        </table>
-        <p><a href="../form/doljnost_create.php" class="btn btn-primary">
-                    <img src="../pictures/Plus.png" width="20px" alt="" style="vertical-align:middle">
-                    Добавить
-                </a></p>
+        </table>      
         
     </div>
 </div> <!-- /container -->
