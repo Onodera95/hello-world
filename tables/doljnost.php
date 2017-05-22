@@ -21,6 +21,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="../tables/sotrudniki.php">Список</a></li>
                     <li><a href="../tables/doljnost.php">Должности</a></li>
+                    <li><a href="../form/instruktaj_create.php">Добавить новый</a></li>
                 </ul>
             </li>
 
@@ -63,7 +64,7 @@
                         echo '<td>'. $value['name'] . '</td>';
 
                         echo '<td width=250>';
-                        echo '<a class="btn btn-success" href="../form/doljnost_create.php?id='.$value['id'].'">Изменить</a>';
+                        echo '<a class="btn btn-success" href="../form/doljnost_update.php?id='.$value['id'].'">Изменить</a>';
                         echo ' ';
                         echo '<a class="btn btn-danger" href="../form/doljnost_delete.php?id='.$value['id'].'">Удалить</a>';
                         echo '</td>';

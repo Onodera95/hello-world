@@ -28,6 +28,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="../tables/pervich_inst.php">Первичный</a></li>
                     <li><a href="../tables/vvod_inst.php">Вводный</a></li>
+                    <li><a href="../form/instruktaj_create.php">Добавить новый</a></li>
                 </ul>
             </li>
 
@@ -66,8 +67,7 @@
                 echo '<a class="btn btn-success" href="vvod_inst.php">Вводный</a>';
                 echo '</td>';
                 echo '</tr>';
-            }
-            //header('location:sotrudniki.php');
+            }           
             ?>
             </tbody>
         </table>

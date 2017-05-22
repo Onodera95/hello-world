@@ -2,30 +2,23 @@
 /**
  * Created by PhpStorm.
  * User: stud03
- * Date: 15.05.2017
- * Time: 14:09
+ * Date: 18.05.2017
+ * Time: 12:50
  */
+require_once '../class/doljnost.php';
 
-/**
- * Здесь будет жить форма html
- */
-require_once '../class/connect.php';
-$db = \sql\connect::getInstance();
-
-require_once '../class/instruktaj.php';
-
-$ob = new \form\instruktaj();
+$ob = new \form\doljnost();
 $data = $ob->form();
 $stop = true;
 if ($data !== false){
     $stop = false;
 }
-?>
 
+?>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Инструктаж</title>
+    <title>Должность</title>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <script src="../bootstrap/js/jquery-3.2.1.min.js" > </script>
@@ -62,22 +55,21 @@ if ($data !== false){
 </nav>
 <div class="container">
 
-    <h1>Новый инструктаж</h1>
+    <h1>Изменить должность</h1>
 
-    <div class="row">
-<form action="instruktaj_create.php" method="post">
-    <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
-    <div class="form-group row">
-        <div class="col-xs-3" >
-            <label for="name">Название</label>
-            <input type="text" class="form-control" name="name" value="<?= !$stop?$data['name']:'' ?>">
-        </div></div>
-    <div class="form-actions">
-        <button type="submit" class="btn btn-primary" >Сохранить изменения</button>
-        <button type="button" class="btn btn-default" href="../tables/instruktaj.php">Отмена</button>
-    </div>
-</form>
-    </div>
+    <form action="doljnost_update.php" method="post">
+        <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
+        <div class="form-group row">
+            <div class="col-xs-3" >
+                <label for="name">Название</label>
+                <input type="text" class="form-control" name="name" value="<?= !$stop?$data['name']:'' ?>">
+            </div></div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary" >Сохранить изменения</button>
+            <a class="btn btn-default" href="../tables/doljnost.php">Отмена</a>
+        </div>
+    </form>
 </div>
 </body>
 </html>

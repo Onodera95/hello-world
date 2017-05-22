@@ -9,8 +9,8 @@
 /**
  * Здесь будет жить форма html
  */
-require_once '../class/connect.php';
-$db = \sql\connect::getInstance();
+//require_once '../class/connect.php';
+//$db = \sql\connect::getInstance();
 
 require_once '../class/instruktaj.php';
 
@@ -62,21 +62,21 @@ if ($data !== false){
 </nav>
 <div class="container">
 
-    <h1>Новый инструктаж</h1>
+    <h1>Изменить инструктаж</h1>
 
     <div class="row">
-<form action="instruktaj_create.php" method="post">
-    <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
-    <div class="form-group row">
-        <div class="col-xs-3" >
-            <label for="name">Название</label>
-            <input type="text" class="form-control" name="name" value="<?= !$stop?$data['name']:'' ?>">
-        </div></div>
-    <div class="form-actions">
-        <button type="submit" class="btn btn-primary" >Сохранить изменения</button>
-        <button type="button" class="btn btn-default" href="../tables/instruktaj.php">Отмена</button>
-    </div>
-</form>
+        <form action="instruktaj_update.php" method="post">
+            <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
+            <div class="form-group row">
+                <div class="col-xs-3" >
+                    <label for="name">Название</label>
+                    <input type="text" class="form-control" name="name" value="<?= !$stop?$data['name']:'' ?>">
+                </div></div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary" >Сохранить изменения</button>
+                <button type="button" class="btn btn-default" href="../tables/instruktaj.php">Отмена</button>
+            </div>
+        </form>
     </div>
 </div>
 </body>

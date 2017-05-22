@@ -20,7 +20,7 @@
             <li><a class="dropdown-toggle" data-toggle="dropdown" href="">Сотудники<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="../tables/sotrudniki.php">Список</a></li>
-                    <li><a href="../tables/doljnost.php">Должности</a></li>
+                    <li><a href="../tables/doljnost.php">Должности</a></li>                    
                 </ul>
             </li>
 
@@ -28,6 +28,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="../tables/pervich_inst.php">Первичный</a></li>
                     <li><a href="../tables/vvod_inst.php">Вводный</a></li>
+                    <li><a href="../form/instruktaj_create.php">Добавить новый</a></li>
                 </ul>
             </li>
 
@@ -47,6 +48,7 @@
 
                 <th>№</th>
                 <th>Статус</th>
+                <th>Опции</th>
 
             </tr>
             </thead>
@@ -60,12 +62,12 @@
                         echo '<td>' . $value['id'] . '</td>';
                         echo '<td>' . $value['status'] . '</td>';
 
-                       /* echo '<td width=250>';
-                        echo '<a class="btn btn-success" href="../form/status_create.php?id='.$value['id'].'">Обновить</a>';
+                        echo '<td width=250>';
+                        echo '<a class="btn btn-success" href="../form/status_update.php?id='.$value['id'].'">Изменить</a>';
                         echo ' ';
                         echo '<a class="btn btn-danger" href="../form/status_delete.php?id='.$value['id'].'">Удалить</a>';
                         echo '</td>';
-                        echo '</tr>'; */
+                        echo '</tr>';
                         }
                 ?>
             </tbody>

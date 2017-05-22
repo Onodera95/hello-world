@@ -12,9 +12,9 @@
 require_once '../class/connect.php';
 $db = \sql\connect::getInstance();
 
-require_once '../class/instruktaj.php';
+require_once '../class/status.php';
 
-$ob = new \form\instruktaj();
+$ob = new \form\status();
 $data = $ob->form();
 $stop = true;
 if ($data !== false){
@@ -25,7 +25,7 @@ if ($data !== false){
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Инструктаж</title>
+    <title>Статус</title>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <script src="../bootstrap/js/jquery-3.2.1.min.js" > </script>
@@ -62,22 +62,20 @@ if ($data !== false){
 </nav>
 <div class="container">
 
-    <h1>Новый инструктаж</h1>
-
-    <div class="row">
-<form action="instruktaj_create.php" method="post">
+<form action="status_update.php" method="post">
     <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">
+
     <div class="form-group row">
         <div class="col-xs-3" >
-            <label for="name">Название</label>
-            <input type="text" class="form-control" name="name" value="<?= !$stop?$data['name']:'' ?>">
+            <label for="status">Статус</label>
+            <input type="text" class="form-control" name="status" value="<?= !$stop?$data['status']:'' ?>">
         </div></div>
+
     <div class="form-actions">
         <button type="submit" class="btn btn-primary" >Сохранить изменения</button>
-        <button type="button" class="btn btn-default" href="../tables/instruktaj.php">Отмена</button>
-    </div>
+        <a class="btn btn-default" href="../tables/status.php">Отмена</a>
+    </div>    
 </form>
     </div>
-</div>
 </body>
 </html>

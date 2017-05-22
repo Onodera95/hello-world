@@ -20,6 +20,7 @@ if (is_bool($data)){
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <title>Должность</title>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <script src="../bootstrap/js/jquery-3.2.1.min.js" > </script>
@@ -31,7 +32,7 @@ if (is_bool($data)){
 
     <div class="span10 offset1">
         <div class="row">
-            <h3>Delete a Customer</h3>
+            <h3>Удаление</h3>
         </div>
 
         <form class="form-horizontal" action='../form/doljnost_delete.php' method="post">
@@ -39,7 +40,7 @@ if (is_bool($data)){
             <p class="alert alert-error">Вы действительно хотите удалить запись "<?=$data['name']?>" ?</p>
             <div class="form-actions">
                 <button type="submit" class="btn btn-danger">Да</button>
-                <a class="btn" href="../tables/doljnost.php">Нет</a>
+                <a class="btn btn-default" href="../tables/doljnost.php" >Нет</a>
             </div>
         </form>
     </div>

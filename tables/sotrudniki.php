@@ -27,6 +27,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="../tables/pervich_inst.php">Первичный</a></li>
                     <li><a href="../tables/vvod_inst.php">Вводный</a></li>
+                    <li><a href="../form/instruktaj_create.php">Добавить новый</a></li>
                 </ul>
             </li>
 
@@ -68,7 +69,7 @@
                     echo '<td>'. $value['status_id'] . '</td>';
 
                     echo '<td width=250>';
-                    echo '<a class="btn btn-success" href="../form/sotrudniki_create.php?id='.$value['id'].'">Изменить</a>';
+                    echo '<a class="btn btn-success" href="../form/sotrudniki_update.php?id='.$value['id'].'">Изменить</a>';
                     echo ' ';
                     echo '<a class="btn btn-danger" href="../form/sotrudniki_delete.php?id='.$value['id'].'">Удалить</a>';
                     echo '</td>';

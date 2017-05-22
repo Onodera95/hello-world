@@ -29,6 +29,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="../tables/pervich_inst.php">Первичный</a></li>
                     <li><a href="../tables/vvod_inst.php">Вводный</a></li>
+                    <li><a href="../form/instruktaj_create.php">Добавить новый</a></li>
                 </ul>
             </li>
 
@@ -67,7 +68,11 @@
 </div> <!-- /container -->
 <p align="center"><input type="checkbox">Ознакомлен с инструктажем</p>
 
-<p align="center"><a href="instruktaj.php" class="btn btn-success disabled"> Подтвердить </a>></p>
+<p align="center"><a href="instruktaj.php" class="btn btn-success disabled"> Подтвердить </a></p>
+<div class="form-action">
+    <a><input type="checkbox">Сохранить изменения</a><br>
+    <a type="submit" class="btn btn-default disabled" href="../tables/instruktaj.php">ОК</a>
+</div>
 
 </body>
 </html>
