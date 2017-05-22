@@ -24,11 +24,12 @@
                 </ul>
             </li>
 
-            <li><a class="dropdown-toggle" data-toggle="dropdown" href="">Список инструктажей<span class="caret"></span></a>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="">Инструктажи<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="../tables/pervich_inst.php">Первичный</a></li>
                     <li><a href="../tables/vvod_inst.php">Вводный</a></li>
                     <li><a href="../form/instruktaj_create.php">Добавить новый</a></li>
+                    <li><a href="../tables/instruktaj.php">Настройки</a></li>
                 </ul>
             </li>
 
@@ -47,6 +48,7 @@
             <tr>
                 <th>ID</th>
                 <th>Наименование</th>
+                <th>Опции</th>
             </tr>
             </thead>
             <tbody>
@@ -60,11 +62,9 @@
                 echo '<td>'. $value['name'] . '</td>';
 
                 echo '<td width=250>';
-                echo '<a class="btn btn-info" href="pervich_inst.php">Подробнее</a>';
-                echo '</td>';
-
-                echo '<td width=250>';
-                echo '<a class="btn btn-success" href="vvod_inst.php">Вводный</a>';
+                echo '<a class="btn btn-success" href="../form/instruktaj_update.php?id='.$value['id'].'">Изменить</a>';
+                echo ' ';
+                echo '<a class="btn btn-danger" href="../form/instruktaj_delete.php?id='.$value['id'].'">Удалить</a>';
                 echo '</td>';
                 echo '</tr>';
             }           

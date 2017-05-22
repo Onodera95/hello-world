@@ -25,11 +25,12 @@
                 </ul>
             </li>
 
-            <li><a class="dropdown-toggle" data-toggle="dropdown" href="">Список инструктажей<span class="caret"></span></a>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="">Инструктажи<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="../tables/pervich_inst.php">Первичный</a></li>
                     <li><a href="../tables/vvod_inst.php">Вводный</a></li>
                     <li><a href="../form/instruktaj_create.php">Добавить новый</a></li>
+                    <li><a href="../tables/instruktaj.php">Настройки</a></li>
                 </ul>
             </li>
 
