@@ -67,7 +67,7 @@ if ($data !== false){
 
     <div class="form-actions">
         <button type="submit" class="btn btn-primary" >Сохранить изменения</button>
-        <button type="button" class="btn btn-default" href="../tables/doljnost.php">Отмена</button>
+        <a type="button" class="btn btn-default" href="../tables/doljnost.php">Отмена</a>
     </div>
 </form>
     </div>

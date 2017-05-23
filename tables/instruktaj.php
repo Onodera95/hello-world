@@ -49,7 +49,7 @@
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
-                <th>ID</th>
+                
                 <th>Наименование</th>
                 <th>Опции</th>
             </tr>
@@ -61,7 +61,7 @@
             $result = $model->select();
             foreach ($result as $value){
                 echo '<tr>';
-                echo '<td>'. $value['id'] . '</td>';
+                //echo '<td>'. $value['id'] . '</td>';
                 echo '<td>'. $value['name'] . '</td>';
 
                 echo '<td width=250>';

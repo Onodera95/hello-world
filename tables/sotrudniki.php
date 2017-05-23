@@ -48,7 +48,7 @@
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
-                <th>№</th>
+
                 <th>Фамилия</th>
                 <th>Имя</th>
                 <th>Отчество</th>
@@ -61,16 +61,27 @@
             <?php
 
             require_once '../class/sotrudniki.php';
+            require_once '../class/doljnost.php';
+            require_once '../class/status.php';
             $model = new \form\sotrudniki();
             $result = $model->select();
                 foreach ($result as $value){
                     echo '<tr>';
-                    echo '<td>'. $value['id'] . '</td>';
+                   // echo '<td>'. $value['id'] . '</td>';
                     echo '<td>'. $value['family'] . '</td>';
                     echo '<td>'. $value['name'] . '</td>';
                     echo '<td>'. $value['otchestvo'] . '</td>';
-                    echo '<td>'. $value['doljnost_id'] . '</td>';
-                    echo '<td>'. $value['status_id'] . '</td>';
+                    $doljnost_model = new \form\doljnost();
+                    $res = $doljnost_model->select('where id='.$value['doljnost_id']);
+                    $doljnost_name = $res[0]['name'];
+                    unset($doljnost_model);
+                    echo '<td>'. $doljnost_name . '</td>';
+
+                    $status_model = new \form\status();
+                    $res = $status_model->select('where id='.$value['status_id']);
+                    $name = $res[0]['status'];
+                    unset($doljnost_model);
+                    echo '<td>'. $name . '</td>';
 
                     echo '<td width=250>';
                     echo '<a class="btn btn-success" href="../form/sotrudniki_update.php?id='.$value['id'].'">Изменить</a>';

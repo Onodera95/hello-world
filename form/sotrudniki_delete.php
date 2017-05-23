@@ -29,7 +29,7 @@ if (is_bool($data)){
 
     <div class="span10 offset1">
         <div class="row">
-            <h3>Delete a Customer</h3>
+            <h3>Удалить</h3>
         </div>
 
         <form class="form-horizontal" action='../form/sotrudniki_delete.php' method="post">

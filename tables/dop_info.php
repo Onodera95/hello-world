@@ -60,15 +60,34 @@
             <tbody>
             <?php
             require_once '../class/dop_info.php';
+            require_once '../class/instruktaj.php';
+            require_once '../class/sotrudniki.php';
+            require_once '../class/status.php';
+
             $model = new \form\dop_info();
             $result = $model->select();
             foreach ($result as $value){
                 echo '<tr>';
-                echo '<td>'. $value['id'] . '</td>';
+                //echo '<td>'. $value['id'] . '</td>';
                 echo '<td>'. $value['date'] . '</td>';
-                echo '<td>'. $value['instruktaj_id'] . '</td>';
-                echo '<td>'. $value['sotrudniki_id'] . '</td>';
-                echo '<td>'. $value['status_id'] . '</td>';
+
+                $inst_model = new \form\instruktaj();
+                $res = $inst_model->select('where id='.$value['instruktaj_id']);
+                $name = $res[0]['name'];
+                unset($inst_model);
+                echo '<td>'. $name . '</td>';
+
+                $sotr_model = new \form\sotrudniki();
+                $res = $sotr_model->select('where id='.$value['sotrudniki_id']);
+                $name = $res[0]['family'];
+                unset($sotr_model);
+                echo '<td>'. $name . '</td>';
+
+                $status_model = new \form\status();
+                $res = $status_model->select('where id='.$value['status_id']);
+                $name = $res[0]['status'];
+                unset($doljnost_model);
+                echo '<td>'. $name . '</td>';
 
                 echo '<td width=250>';
                 echo '<a class="btn btn-success" href="../form/dop_info_update.php?id='.$value['id'].'">Изменить</a>';

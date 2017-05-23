@@ -49,30 +49,14 @@
             </thead>
             <tbody>
                 <object><embed src="../Первичный%20инструктаж.pdf" width="1200" height="620" /></object>
-            <?php
-            require_once '../class/pervichnyi_inst.php';
-            $model = new \form\pervichnyi_inst();
-            $result = $model->select();
-            foreach ($result as $value){
-                echo '<tr>';
-                echo '<td>'. $value['id'] . '</td>';
-                echo '<td>'. $value['description'] . '</td>';
-                echo '<td>'. $value['instruktaj_id'] . '</td>';
-            }
-
-            ?>
 
             </tbody>
         </table>
     </div>
 </div> <!-- /container -->
 <p align="center"><input type="checkbox">Ознакомлен с инструктажем</p>
+<p align="center"><a href="instruktaj.php" class="btn btn-success"> Подтвердить </a></p>
 
-<p align="center"><a href="instruktaj.php" class="btn btn-success disabled"> Подтвердить </a></p>
-<div class="form-action">
-    <a><input type="checkbox">Сохранить изменения</a><br>
-    <a type="submit" class="btn btn-default disabled" href="../tables/instruktaj.php">ОК</a>
-</div>
 
 </body>
 </html>

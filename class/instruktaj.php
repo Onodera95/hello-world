@@ -63,8 +63,11 @@ class instruktaj
 
     }
 
-    public function select(){
+    public function select($where = ''){
         $t = new SQL_SELECT();
+        if (strpos($where,'where ') !== false){
+            $t->where($where);
+        }
         $t->setTable($this->getTables());
         return $t->select();
     }

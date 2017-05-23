@@ -48,28 +48,13 @@
             </thead>
             <tbody>
                 <object><embed src="../Вводный%20инструктаж.pdf" width="1200" height="620" /></object>
-
-            <?php
-            require_once '../class/vvod_inst.php';
-            $model = new \form\vvod_inst();
-            $result = $model->select();
-            foreach ($result as $value){
-                echo '<tr>';
-                echo '<td>'. $value['id'] . '</td>';
-                echo '<td>'. $value['description'] . '</td>';
-                //echo '<td>'. $value['instruktaj_id'] . '</td>';
-            }
-            //header('location:sotrudniki.php');
-            ?>
-
-
             </tbody>
         </table>
     </div>
 </div> <!-- /container -->
 
-    <p align="center"><input type="checkbox" id="check" value="Ознакомлен с инструктажем"><label for="check">Ознакомлен с инструктажем</label> </p>
-    <p align="center"><a href="instruktaj.php" class="btn btn-success disabled"> Подтвердить </a></p>
+    <p align="center"><input type="checkbox" value="Ознакомлен с инструктажем">Ознакомлен с инструктажем</p>
+    <p align="center"><a href="instruktaj.php" class="btn btn-success"> Подтвердить </a></p>
 
 </body>
 </html>

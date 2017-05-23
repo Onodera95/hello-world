@@ -50,7 +50,6 @@
             <thead>
             <tr>
 
-                <th>№</th>
                 <th>Статус</th>
                 <th>Опции</th>
 
@@ -63,7 +62,7 @@
                     $result = $model->select();
                     foreach ($result as $value){
                         echo '<tr>';
-                        echo '<td>' . $value['id'] . '</td>';
+                        //echo '<td>' . $value['id'] . '</td>';
                         echo '<td>' . $value['status'] . '</td>';
 
                         echo '<td width=250>';

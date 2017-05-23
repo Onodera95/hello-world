@@ -61,7 +61,7 @@ if ($data !== false){
 </nav>
 <div class="container">
 
-    <h1>Изменить запись</h1>
+    <h1>Новая запись</h1>
     <div class="row">
         <form action="sotrudniki_create.php" method="post">
     <input type="hidden" name="id" value="<?= !$stop?$data['id']:'' ?>">

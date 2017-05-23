@@ -28,8 +28,8 @@
                 <ul class="dropdown-menu">
                     <li><a href="../tables/pervich_inst.php">Первичный</a></li>
                     <li><a href="../tables/vvod_inst.php">Вводный</a></li>
-                    //<li><a href="../form/instruktaj_create.php">Добавить новый</a></li>
                     <li><a href="../tables/instruktaj.php">Настройки</a></li>
+                </ul>
             </li>
 
             <li><a href="../tables/dop_info.php">Дополнительная информация</a></li>
@@ -50,7 +50,7 @@
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
-                <th>ID</th>
+
                 <th>Наименование</th>
                 <th>Опции</th>
             </tr>
@@ -64,7 +64,7 @@
                         foreach ($result as $value)
                     {
                         echo '<tr>';
-                        echo '<td>'. $value['id'] . '</td>';
+                       // echo '<td>'. $value['id'] . '</td>';
                         echo '<td>'. $value['name'] . '</td>';
 
                         echo '<td width=250>';
